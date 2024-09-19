@@ -5,7 +5,7 @@ from shutil import make_archive
 import paramiko
 
 # host = '192.168.1.74'
-host = '192.168.1.199'
+host = '192.168.137.199'
 user = 'root'
 secret = '1234'
 remote_path = "/mph_ref/"

@@ -190,6 +190,11 @@ std::string LinuxSerialPort::getName() const {
     return this->name;
 }
 
+void LinuxSerialPort::wait(int time_ms){
+	usleep(time_ms*1000);
+}
+
+
 #endif
 
 

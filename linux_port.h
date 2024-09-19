@@ -36,6 +36,9 @@ namespace std {
 
         std::string getName() const override;
 
+        virtual void wait(int time_ms);
+
+
     private:
 
         int fd = -1;
