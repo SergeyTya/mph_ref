@@ -1,0 +1,3 @@
+[submodule "lib_SerialPort"]
+	path = lib_SerialPort
+	url = https://github.com/SergeyTya/lib_SerialPort.git

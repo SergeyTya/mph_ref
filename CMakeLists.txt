@@ -21,6 +21,12 @@ FILE(GLOB APP_SRC
 	${CMAKE_CURRENT_SOURCE_DIR}/*.cpp
 )
 
+add_subdirectory(lib_SerialPort)
+
+target_link_libraries(${TARGET_NAME}
+    PUBLIC lib_SerialPort
+)
+
 target_sources( ${TARGET_NAME} PUBLIC ${APP_SRC})
 
 target_include_directories( ${TARGET_NAME} PUBLIC ${CMAKE_CURRENT_SOURCE_DIR} )
@@ -38,6 +44,7 @@ target_compile_options(
 		-std=c++17
 )
 
+add_definitions(-D_USE_MATH_DEFINES)
 
 #install files
 install(TARGETS  ${TARGET_NAME} DESTINATION .) # use cmake --install build_dir --prefix install_dir
